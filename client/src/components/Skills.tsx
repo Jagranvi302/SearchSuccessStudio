@@ -43,17 +43,17 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/30">
+    <section id="skills" className="py-20 bg-muted/30" aria-labelledby="skills-heading">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <header className="text-center mb-16">
+            <h2 id="skills-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Skills & Expertise
             </h2>
             <p className="text-lg text-muted-foreground">
               Comprehensive SEO skills backed by proven tools and methodologies
             </p>
-          </div>
+          </header>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             <Card>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, Phone, Linkedin, Facebook, ArrowDown } from "lucide-react";
+import { SiPinterest, SiX, SiInstagram, SiTiktok } from "react-icons/si";
 import professionalPhoto from "@assets/generated_images/Professional_business_headshot_71114822.png";
 
 export default function Hero() {
@@ -63,7 +64,7 @@ export default function Hero() {
             </Button>
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 flex-wrap">
             <Button
               variant="ghost"
               size="icon"
@@ -93,6 +94,70 @@ export default function Hero() {
                 aria-label="Facebook Page"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              data-testid="link-twitter"
+            >
+              <a 
+                href="https://x.com/SearchSucStudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter Profile"
+              >
+                <SiX className="w-5 h-5" />
+              </a>
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              data-testid="link-instagram"
+            >
+              <a 
+                href="https://www.instagram.com/searchsuccessstudio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram Profile"
+              >
+                <SiInstagram className="w-5 h-5" />
+              </a>
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              data-testid="link-pinterest"
+            >
+              <a 
+                href="https://www.pinterest.com/searchsuccessstudio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pinterest Profile"
+              >
+                <SiPinterest className="w-5 h-5" />
+              </a>
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              data-testid="link-tiktok"
+            >
+              <a 
+                href="https://www.tiktok.com/@searchsuccessstudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok Profile"
+              >
+                <SiTiktok className="w-5 h-5" />
               </a>
             </Button>
             

@@ -36,17 +36,17 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-20" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <header className="text-center mb-16">
+            <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               SEO Services
             </h2>
             <p className="text-lg text-muted-foreground">
               Comprehensive SEO solutions to boost your online presence and drive organic growth
             </p>
-          </div>
+          </header>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (

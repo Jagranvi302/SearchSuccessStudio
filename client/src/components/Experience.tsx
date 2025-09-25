@@ -52,17 +52,17 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20" aria-labelledby="experience-heading">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <header className="text-center mb-16">
+            <h2 id="experience-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Experience & Education
             </h2>
             <p className="text-lg text-muted-foreground">
               Professional journey and continuous learning in SEO and digital marketing
             </p>
-          </div>
+          </header>
 
           {/* Professional Experience */}
           <div className="mb-12">

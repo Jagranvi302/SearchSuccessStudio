@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Linkedin, Facebook, Send } from "lucide-react";
+import { SiPinterest, SiX, SiInstagram, SiTiktok } from "react-icons/si";
 import { useState } from "react";
 
 export default function Contact() {
@@ -61,21 +62,41 @@ export default function Contact() {
       label: "Facebook",
       href: "https://www.facebook.com/searchsuccessstudio",
       color: "text-blue-600"
+    },
+    {
+      icon: SiX,
+      label: "Twitter",
+      href: "https://x.com/SearchSucStudio"
+    },
+    {
+      icon: SiInstagram,
+      label: "Instagram",
+      href: "https://www.instagram.com/searchsuccessstudio/"
+    },
+    {
+      icon: SiPinterest,
+      label: "Pinterest",
+      href: "https://www.pinterest.com/searchsuccessstudio/"
+    },
+    {
+      icon: SiTiktok,
+      label: "TikTok",
+      href: "https://www.tiktok.com/@searchsuccessstudio"
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
+    <section id="contact" className="py-20 bg-muted/30" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <header className="text-center mb-16">
+            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Get In Touch
             </h2>
             <p className="text-lg text-muted-foreground">
               Ready to boost your website's SEO performance? Let's discuss your project!
             </p>
-          </div>
+          </header>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -178,7 +199,7 @@ export default function Contact() {
                   <CardTitle>Follow Me</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex gap-4">
+                  <div className="flex gap-3 flex-wrap">
                     {socialLinks.map((social, index) => (
                       <Button
                         key={index}
@@ -186,7 +207,7 @@ export default function Contact() {
                         size="icon"
                         asChild
                         className="hover-elevate"
-                        data-testid={`social-link-${index}`}
+                        data-testid={`link-${social.label.toLowerCase()}`}
                       >
                         <a 
                           href={social.href}
