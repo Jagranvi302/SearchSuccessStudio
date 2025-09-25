@@ -24,8 +24,8 @@ export default function SEOHead({
     // Update document title
     document.title = title;
     
-    // Canonical link - generate from current URL if not provided
-    const canonicalUrl = url || (() => {
+    // Generate canonical URL from current URL if not provided
+    const currentCanonicalUrl = url || (() => {
       const currentUrl = new URL(window.location.href);
       currentUrl.hash = '';
       currentUrl.search = '';
@@ -62,7 +62,7 @@ export default function SEOHead({
     updateMetaTag('og:title', title, true);
     updateMetaTag('og:description', description, true);
     updateMetaTag('og:type', type, true);
-    updateMetaTag('og:url', canonicalUrl, true);
+    updateMetaTag('og:url', currentCanonicalUrl, true);
     updateMetaTag('og:image', image, true);
     updateMetaTag('og:site_name', 'Rashid Maqbool Portfolio', true);
     updateMetaTag('og:locale', 'en_US', true);
@@ -87,7 +87,7 @@ export default function SEOHead({
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', canonicalUrl);
+    canonical.setAttribute('href', currentCanonicalUrl);
     
   }, [title, description, keywords, image, url, type, author]);
 

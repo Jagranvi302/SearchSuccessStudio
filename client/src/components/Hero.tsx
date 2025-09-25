@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, Phone, Linkedin, Facebook, ArrowDown } from "lucide-react";
 import { SiPinterest, SiX, SiInstagram, SiTiktok } from "react-icons/si";
-import professionalPhoto from "@assets/generated_images/Professional_business_headshot_71114822.png";
+import professionalPhoto from "@assets/Rashid_1758823345058.jpeg";
 
 export default function Hero() {
   const scrollToContact = () => {
